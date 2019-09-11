@@ -1,0 +1,21 @@
+$scope.template = $interpolate('<tr>
+    <td><table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="block" style="padding-top: 4px;"><a href="%%=RedirectTo(@linkPrimary_YYYYY_W_FR)=%%" target="_blank" alias="%%=v(@alias)=%%"><img alt="FEMME" width="320" height="46" style="display:block; font-family:Helvetica,Arial,sans-serif; font-size:10px; color:#000000;" border="0" src="{{cta1.name}}" /></a></td>
+          <td class="block" style="padding-top: 4px;"><a href="%%=RedirectTo(@linkPrimary_YYYYY_M_FR)=%%" target="_blank" alias="%%=v(@alias)=%%"><img alt="HOMME" width="320" height="46" style="display:block; font-family:Helvetica,Arial,sans-serif; font-size:10px; color:#000000;" border="0" src="http://image.email.oldnavy.ca/lib/fe9f13707564037f75/m/55/ON_CTA_Blue_Men_320FR.gif" /></a></td>
+        </tr>
+      </table></td>
+  </tr>')($scope);
+
+<tr>
+    <td><table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="block" style="padding-top: 4px;"><a href="%%=RedirectTo(@linkPrimary_YYYYY_W_FR)=%%" target="_blank" alias="%%=v(@alias)=%%"><img alt="FEMME" width="320" height="46" style="display:block; font-family:Helvetica,Arial,sans-serif; font-size:10px; color:#000000;" border="0" src="http://image.email.oldnavy.ca/lib/fe9f13707564037f75/m/55/ON_CTA_Blue_Wm_320FR.gif" /></a></td>
+          <td class="block" style="padding-top: 4px;"><a href="%%=RedirectTo(@linkPrimary_YYYYY_M_FR)=%%" target="_blank" alias="%%=v(@alias)=%%"><img alt="HOMME" width="320" height="46" style="display:block; font-family:Helvetica,Arial,sans-serif; font-size:10px; color:#000000;" border="0" src="http://image.email.oldnavy.ca/lib/fe9f13707564037f75/m/55/ON_CTA_Blue_Men_320FR.gif" /></a></td>
+        </tr>
+      </table></td>
+  </tr>
+
+  $scope.template = '<tr><td><table cellspacing="0" cellpadding="0" border="0"><tr><td class="block" style="padding-top: 4px;"><a href="%%=RedirectTo(@linkPrimary_YYYYY_W_FR)=%%" target="_blank" alias="%%=v(@alias)=%%"><img alt="{{cta1.name}}" width="320" height="46" style="display:block; font-family:Helvetica,Arial,sans-serif; font-size:10px; color:#000000;" border="0" src="{{cta1.url}}" /></a></td><td class="block" style="padding-top: 4px;"><a href="%%=RedirectTo(@linkPrimary_YYYYY_M_FR)=%%" target="_blank" alias="%%=v(@alias)=%%"><img alt="HOMME" width="320" height="46" style="display:block; font-family:Helvetica,Arial,sans-serif; font-size:10px; color:#000000;" border="0" src="http://image.email.oldnavy.ca/lib/fe9f13707564037f75/m/55/ON_CTA_Blue_Men_320FR.gif" /></a></td></tr></table></td></tr>';
+
+  $scope.concat = $interpolate($scope.template)($scope);
