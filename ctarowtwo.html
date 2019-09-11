@@ -1,0 +1,20 @@
+  <div style="padding-left: 50px;">
+  <h1>CTA 2x</h1>
+    <h2>CTA1: <span ng-bind="selected"></span></h2>
+
+    <input type="text" ng-model="selected" typeahead-on-select="ctaStuff($item)" typeahead="cta.name for cta in ctas | filter:$viewValue | limitTo: 5" />
+    <input type="text" ng-model="cta1" />
+    <br><br>
+    <h2 id="test">CTA2: <span ng-bind="selected2"></span></h2>
+
+    <input type="text" ng-model="selected2" typeahead-on-select="ctaStuff2($item)" typeahead="cta.name for cta in ctas | filter:$viewValue | limitTo: 5" />
+    <input type="text" ng-model="cta2" />
+
+    <br><br>
+    <button ng-click="myFunc()" type="button">Generate 2x 640 CTA</button>
+    <br>
+    <p ng-bind-html="myText" compile-template></p>
+
+<textarea rows="10" cols="60">{{concat}}</textarea>
+
+ </div>

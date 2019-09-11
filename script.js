@@ -1,6 +1,17 @@
-var app = angular.module('myApp', ['ngAnimate', 'ui.bootstrap', 'ngSanitize']);
+var app = angular.module('myApp', ['ngAnimate', 'ui.bootstrap', 'ngSanitize', 'ngRoute']);
+
+app.config(function($routeProvider){
+$routeProvider.when('/', {
+		templateUrl: 'main.html'
+	}).when('/ctarowtwo', {
+		templateUrl: 'ctarowtwo.html'
+	}).when('/ctarowfour', {
+		templateUrl: 'ctarowfour.html'
+	});
+});
 
 app.controller('myCtrl', function($scope, $interpolate, $sce) {
+
 	$scope.selected = '';
 	$scope.selected2 = '';
 	$scope.selecteda = '';
@@ -8,6 +19,7 @@ app.controller('myCtrl', function($scope, $interpolate, $sce) {
 	$scope.selectedc = '';
 	$scope.selectedd = '';
 
+//640 ONCA ctas
 	$scope.ctas = [
 	{name:"GRAPHIC TEES", url:"https://image.email.oldnavy.ca/lib/fe9f13707564037f75/m/127/graphictees640.gif"},
 	{name:"JEANS", url:"https://image.email.oldnavy.ca/lib/fe9f13707564037f75/m/120/jeans640.gif"},
@@ -85,6 +97,7 @@ app.controller('myCtrl', function($scope, $interpolate, $sce) {
 	{name: "test", url:"test.url"}
 	];
 
+//320 ONCA ctas
 	$scope.ctas320 = [
 	{name: "debardeurs", url:"https://image.email.oldnavy.ca/lib/fe9f13707564037f75/m/121/debardeurs320.gif"},
 	{name: "tees", url:"https://image.email.oldnavy.ca/lib/fe9f13707564037f75/m/121/tees320.gif"},
@@ -117,7 +130,7 @@ app.controller('myCtrl', function($scope, $interpolate, $sce) {
 	{name: "test", url:"test.url"}
 	];
 
-//CTA 2
+//CTA 2x
 	$scope.ctaStuff = function(site){
 		$scope.cta1 = site;
 	};
@@ -133,7 +146,7 @@ app.controller('myCtrl', function($scope, $interpolate, $sce) {
 	};
 
 
-//CTA 3
+//CTA 4x
 	$scope.ctaStuffa = function(site){
 		$scope.ctaa = site;
 	};
@@ -155,13 +168,10 @@ app.controller('myCtrl', function($scope, $interpolate, $sce) {
 		$scope.myTexttwo = $sce.trustAsHtml($scope.templatetwo);
 		$scope.concattwo = $interpolate($scope.templatetwo)($scope);
 	};
+   
 
 
-    
 });
-
-
-
 
 
 
@@ -181,3 +191,4 @@ app.directive('compileTemplate', function($compile, $parse){
     }
 
 });
+

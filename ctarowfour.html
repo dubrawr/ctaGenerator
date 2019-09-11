@@ -1,0 +1,31 @@
+  <div style="padding-left: 50px;">
+  <h1>CTA 4x</h1>
+    <h2>CTA1: <span ng-bind="selecteda"></span></h2>
+    <input type="text" ng-model="selecteda" typeahead-on-select="ctaStuffa($item)" typeahead="cta.name for cta in ctas320 | filter:$viewValue | limitTo: 5" />
+    <input type="text" ng-model="ctaa" />
+    <br><br>
+    
+    <h2 id="test">CTA2: <span ng-bind="selectedb"></span></h2>
+    <input type="text" ng-model="selectedb" typeahead-on-select="ctaStuffb($item)" typeahead="cta.name for cta in ctas320 | filter:$viewValue | limitTo: 5" />
+    <input type="text" ng-model="ctab" />
+    <br><br>
+
+    <h2 id="test">CTA3: <span ng-bind="selectedc"></span></h2>
+    <input type="text" ng-model="selectedc" typeahead-on-select="ctaStuffc($item)" typeahead="cta.name for cta in ctas320 | filter:$viewValue | limitTo: 5" />
+    <input type="text" ng-model="ctac" />
+    <br><br>
+
+    <h2 id="test">CTA4: <span ng-bind="selectedd"></span></h2>
+    <input type="text" ng-model="selectedd" typeahead-on-select="ctaStuffd($item)" typeahead="cta.name for cta in ctas320 | filter:$viewValue | limitTo: 5" />
+    <input type="text" ng-model="ctad" />       
+
+    <br><br>
+    <button ng-click="myFuncfour()" type="button">Generate 4x 320 CTA</button>
+    <br>
+    <p ng-bind-html="myTexttwo" compile-template></p>
+
+<textarea rows="10" cols="60">{{concattwo}}</textarea>
+
+<br><br>
+
+ </div>
